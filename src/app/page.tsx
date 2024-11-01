@@ -2,9 +2,7 @@
 import { Landing } from "@/lib/components/Landing";
 import { useBackground } from "@/lib/hooks/background";
 import { AnimatePresence, motion } from "framer-motion";
-import { Calendar, Linkedin, Twitter } from "lucide-react";
 import { NextPage } from "next";
-import styled from "styled-components";
 
 const Home: NextPage = () => {
   const backgroundUtils = useBackground();
