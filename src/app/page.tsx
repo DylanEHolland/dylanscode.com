@@ -31,7 +31,7 @@ const StyledCalendarIcon = styled(Calendar)`
   }
 `;
 
-export const Home: NextPage = () => {
+const Home: NextPage = () => {
   return (
     <motion.div
       className="w-full max-w-3xl ml-auto mr-auto pt-[20%]"
