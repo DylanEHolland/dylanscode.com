@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Calendar, Linkedin, Twitter, X } from "lucide-react";
+import { Calendar, Linkedin, Twitter } from "lucide-react";
 import { NextPage } from "next";
 import styled from "styled-components";
 
