@@ -6,33 +6,6 @@ import { Calendar, Linkedin, Twitter } from "lucide-react";
 import { NextPage } from "next";
 import styled from "styled-components";
 
-const StyledTwitterIcon = styled(Twitter)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1); /* Slightly increases the size */
-    color: #1da1f2; /* Example color change on hover */
-  }
-`;
-
-const StyledLinkedinIcon = styled(Linkedin)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1);
-    color: #005582;
-  }
-`;
-
-const StyledCalendarIcon = styled(Calendar)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1);
-    color: #0057cc;
-  }
-`;
-
 const Home: NextPage = () => {
   const backgroundUtils = useBackground();
   return (

@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, Github, Linkedin, Twitter } from "lucide-react";
 import styled from "styled-components";
-import { Button } from "antd";
 const StyledTwitterIcon = styled(Twitter)`
   transition: all 0.2s ease;
   &:hover {
