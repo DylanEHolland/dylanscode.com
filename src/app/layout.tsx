@@ -30,19 +30,7 @@ Readonly<{
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased items-center justify-center w-full`}
       >
-        <div
-          style={{
-            background: 'url("/me-cartoon.png")',
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            width: "100vw",
-            height: "100vh",
-          }}
-        >
-          <AnimatePresence mode="wait">
-            <>{children}</>
-          </AnimatePresence>
-        </div>
+        <>{children}</>
       </body>
     </html>
   );
