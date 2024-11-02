@@ -12,8 +12,8 @@ const projects: Record<string, React.FC | React.ReactElement> = {
 };
 
 export const Projects: React.FC<{
-  setScreen: (screen: "landing" | "projects") => void;
-}> = ({ setScreen }) => {
+  setScreen?: (screen: "landing" | "projects") => void;
+}> = ({}) => {
   const [selectedProject, setSelectedProject] = useState<string>("Politech.ai");
   const ProjectDescription = projects[selectedProject];
   return (
@@ -40,7 +40,7 @@ export const Projects: React.FC<{
         className="w-2/3 relative p-8 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-hidden rounded-xl shadow-md"
       >
         <h1 className="text-2xl font-bold mb-4">{selectedProject}</h1>
-        {/* @ts-ignore */}
+        {/* @ts-expect-error */}
         <ProjectDescription />
       </motion.div>
     </motion.div>
