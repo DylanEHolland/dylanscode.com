@@ -40,7 +40,7 @@ export const Projects: React.FC<{
         className="w-2/3 relative p-8 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-hidden rounded-xl shadow-md"
       >
         <h1 className="text-2xl font-bold mb-4">{selectedProject}</h1>
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error ProjectDescription is a React.FC or React.ReactElement but TS doesn't care and doesn't want to render it */}
         <ProjectDescription />
       </motion.div>
     </motion.div>
