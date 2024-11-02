@@ -1,33 +1,64 @@
 "use client";
 import { Landing } from "@/lib/components/Landing";
-import { useBackground } from "@/lib/hooks/background";
+import { Projects } from "@/lib/components/Projects";
 import { AnimatePresence, motion } from "framer-motion";
 import { NextPage } from "next";
+import { useState } from "react";
+
+const backgroundImages: { [key: string]: string } = {
+  landing: "/me-cartoon.png",
+  projects: "/me-cartoon-2.png",
+};
 
 const Home: NextPage = () => {
-  const backgroundUtils = useBackground();
+  const [screen, setScreen] = useState<"landing" | "projects">("landing");
+
   return (
-    <motion.div
-      style={{
-        background: `url("${backgroundUtils.background}")`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
+    <>
       <AnimatePresence mode="wait">
         <motion.div
-          className="w-full max-w-3xl ml-auto mr-auto pt-[20%]"
+          key={screen}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // exit={{ opacity: 0 }}
+
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "-100%" }}
+          transition={{ duration: 0.5 }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            backgroundImage: `url("${backgroundImages[screen]}")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            width: "100vw",
+            height: "100vh",
+            zIndex: -1,
+          }}
+        ></motion.div>
+      </AnimatePresence>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`${screen}-container`}
+          className={`w-full max-w-${
+            screen === "projects" ? "5xl" : "3xl"
+          } ml-auto mr-auto pt-[${screen !== "projects" ? "20" : "20"}%]`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
+          style={{
+            zIndex: 100,
+          }}
         >
-          <Landing />
+          {screen === "landing" && <Landing setScreen={setScreen} />}
+          {screen === "projects" && <Projects setScreen={setScreen} />}
         </motion.div>
       </AnimatePresence>
-    </motion.div>
+    </>
   );
   // return (
   //     <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
