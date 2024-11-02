@@ -17,7 +17,10 @@ export const Projects: React.FC<{
   const [selectedProject, setSelectedProject] = useState<string>("Politech.ai");
   const ProjectDescription = projects[selectedProject];
   return (
-    <motion.div key="projects-internal-container" className="flex w-lg">
+    <motion.div
+      key="projects-internal-container"
+      className="flex w-3/4 ml-auto mr-auto"
+    >
       <motion.div className="w-1/3 mr-4">
         {Object.keys(projects)
           .reverse()

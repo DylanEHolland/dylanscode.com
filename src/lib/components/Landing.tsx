@@ -43,7 +43,7 @@ export const Landing: React.FC<{
   setScreen: (screen: "landing" | "projects") => void;
 }> = ({ setScreen }) => {
   return (
-    <motion.div>
+    <motion.div className="w-2/3 ml-auto mr-auto">
       <motion.div className="relative p-8 pb-2 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-hidden rounded-xl shadow-md">
         <span className="text-2xl font-semibold text-white mb-4">
           Hi, I{"'"}m Dylan
