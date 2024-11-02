@@ -41,21 +41,23 @@ const Home: NextPage = () => {
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-        <motion.div
-          key={`${screen}-container`}
-          className={`w-full max-w-${
-            screen === "projects" ? "5xl" : "3xl"
-          } ml-auto mr-auto pt-[${screen !== "projects" ? "20" : "20"}%]`}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          style={{
-            zIndex: 100,
-          }}
-        >
-          {screen === "landing" && <Landing setScreen={setScreen} />}
-          {screen === "projects" && <Projects setScreen={setScreen} />}
+        <motion.div style={{ width: "100vw", height: "100vh" }}>
+          <motion.div
+            key={`${screen}-container`}
+            className={`w-full max-w-${
+              screen === "projects" ? "4xl" : "3xl"
+            } ml-auto mr-auto pt-48`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              zIndex: 100,
+            }}
+          >
+            {screen === "landing" && <Landing setScreen={setScreen} />}
+            {screen === "projects" && <Projects setScreen={setScreen} />}
+          </motion.div>
         </motion.div>
       </AnimatePresence>
     </>
