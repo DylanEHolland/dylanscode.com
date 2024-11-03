@@ -1,3 +1,7 @@
+import { motion } from "framer-motion";
+import { AnimatedList } from "./AnimatedList";
+import { AnimatedListItem } from "./AnimatedListItem";
+
 export const PolitechAI = () => {
   return (
     <>
@@ -9,25 +13,25 @@ export const PolitechAI = () => {
       <div className="mt-4"></div>
       Some highlights from my time include:
       <div className="mt-4"></div>
-      <ul className="list-disc list-inside">
-        <li>
+      <AnimatedList>
+        <AnimatedListItem>
           Architecting a backend capable of handling {">"}1 million users, each
-          of which had dozens to hundreds of pages data to account for
-        </li>
-        <li>
+          of which had dozens to hundreds of pages of data to account for
+        </AnimatedListItem>
+        <AnimatedListItem>
           Acting as principle engineer for all systems, setting code patterns
           and enforcing good habits on a team via code reviews
-        </li>
-        <li>
+        </AnimatedListItem>
+        <AnimatedListItem>
           Building the foundations for scrapers that pulled tens to hundreds of
           thousands of pages a week utilizing a tech stack made of selenium,
           typescript, python, postgres and redis{" "}
-        </li>
-        <li>
+        </AnimatedListItem>
+        <AnimatedListItem>
           Training and overseeing all new team members, as well as managing
           daily operations and interfacing with clients
-        </li>
-      </ul>
+        </AnimatedListItem>
+      </AnimatedList>
     </>
   );
 };

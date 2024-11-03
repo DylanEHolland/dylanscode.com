@@ -1,43 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, Github, Linkedin, Twitter } from "lucide-react";
-import styled from "styled-components";
-
-const StyledTwitterIcon = styled(Twitter)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1); /* Slightly increases the size */
-    color: #1da1f2; /* Example color change on hover */
-  }
-`;
-
-const StyledLinkedinIcon = styled(Linkedin)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1);
-    color: #005582;
-  }
-`;
-
-const StyledCalendarIcon = styled(Calendar)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1);
-    color: #0057cc;
-  }
-`;
-
-const StyledGithubIcon = styled(Github)`
-  transition: all 0.2s ease;
-  &:hover {
-    stroke-width: 2.5;
-    transform: scale(1.1);
-    color: #000000;
-  }
-`;
+import { SocialLinks } from "./SocialLinks";
+import { CALENDLY_LINK } from "../constants/links";
 
 export const Landing: React.FC<{
   setScreen: (screen: "landing" | "projects") => void;
@@ -49,7 +13,7 @@ export const Landing: React.FC<{
           Hi, I{"'"}m Dylan
         </span>
         <motion.div>
-          I’m a self-taught developer with hands-on experience building digital
+          I’m a software engineer with hands-on experience building digital
           products since I was a teenager. My early work led me to tech roles at
           an e-commerce company that later sold and then into a YC-backed
           startup, where I thrived in fast-paced, impact-driven environments.
@@ -71,10 +35,7 @@ export const Landing: React.FC<{
           className="rounded-full mr-auto ml-auto"
         /> */}
         <motion.div className="flex items-center gap-4 ml-auto mr-0 mt-8">
-          <StyledTwitterIcon className="cursor-pointer" />
-          <StyledLinkedinIcon className="cursor-pointer" />
-          <StyledGithubIcon className="cursor-pointer" />
-          <StyledCalendarIcon className="cursor-pointer" />
+          <SocialLinks />
         </motion.div>
       </motion.div>
       <motion.div className="flex items-center justify-center mt-4 z-100">
@@ -86,9 +47,11 @@ export const Landing: React.FC<{
         >
           Resume
         </button>
-        <button className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md">
-          Book a call
-        </button>
+        <a href={CALENDLY_LINK} target="_blank">
+          <button className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md">
+            Book a call
+          </button>
+        </a>
       </motion.div>
     </motion.div>
   );
