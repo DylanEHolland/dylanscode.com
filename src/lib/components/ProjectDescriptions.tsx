@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { AnimatedList } from "./AnimatedList";
 import { AnimatedListItem } from "./AnimatedListItem";
 
