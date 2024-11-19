@@ -34,3 +34,79 @@ export const PolitechAI = () => {
     </>
   );
 };
+
+export const DigiBuild = () => {
+  return (
+    <>
+      I started at digibuild as a full stack engineer working on a platform for
+      supply chain procurement utilizing typescript with nextjs for the
+      frontend, graphql and postgres on the backend and hyperledger for the
+      blockchain.
+      <div className="mt-4"></div>
+      Some highlights from my time include:
+      <div className="mt-4"></div>
+      <AnimatedList>
+        <AnimatedListItem>
+          Enforcing code patterns between screens and pages to prevent constant
+          bugs and allow for rapid progress to be made on building out multiple
+          workflows alongside standardization of existing components and
+          implementation of all new UI components as strictly typed react
+          components
+        </AnimatedListItem>
+        <AnimatedListItem>
+          Utilized react context and hooks to centralize a lot of state
+          management, and added an ORM to allow for optimizing queries when
+          needed + added redis which combined sped up the app by over 100x.
+        </AnimatedListItem>
+        <AnimatedListItem>
+          Implemented backend worker to remove backend queries from the blocking
+          the frontend entirely
+        </AnimatedListItem>
+        <AnimatedListItem>
+          Worked closely with PM and COO to implement a large number of new
+          frontend features once unblocked to help company secure its next round
+          of funding.
+        </AnimatedListItem>
+        <AnimatedListItem>
+          Instilled a team based culture of collaboration which allowed for
+          junior engineers to get rapidly up to speed and contribute
+          meaningfully.
+        </AnimatedListItem>
+        <AnimatedListItem>
+          Added testing frameworks and QA practices which led to a large
+          reduction in bugs and a large increase in confidence in the product.
+        </AnimatedListItem>
+      </AnimatedList>
+    </>
+  );
+};
+
+export const SouffleClub = () => {
+  return (
+    <>
+      <div className="mt-4"></div>
+      Some highlights from my time include:
+      <div className="mt-4"></div>
+    </>
+  );
+};
+
+export const TrustedFor = () => {
+  return (
+    <>
+      <div className="mt-4"></div>
+      Some highlights from my time include:
+      <div className="mt-4"></div>
+    </>
+  );
+};
+
+export const ATVsNetWeb = () => {
+  return (
+    <>
+      <div className="mt-4"></div>
+      Some highlights from my time include:
+      <div className="mt-4"></div>
+    </>
+  );
+};

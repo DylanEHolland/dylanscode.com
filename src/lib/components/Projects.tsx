@@ -1,13 +1,19 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { PolitechAI } from "./ProjectDescriptions";
+import {
+  ATVsNetWeb,
+  DigiBuild,
+  PolitechAI,
+  SouffleClub,
+  TrustedFor,
+} from "./ProjectDescriptions";
 // import Image from "next/image";
 
 const projects: Record<string, React.FC | React.ReactElement> = {
-  ATVsNetWeb: () => <>test</>,
-  TrustedFor: () => <>test</>,
-  "Souffle Club": () => <>test</>,
-  DigiBuild: () => <>test</>,
+  ATVsNetWeb: ATVsNetWeb,
+  TrustedFor: TrustedFor,
+  "Souffle Club": SouffleClub,
+  DigiBuild: DigiBuild,
   "Politech.ai": PolitechAI,
 };
 
