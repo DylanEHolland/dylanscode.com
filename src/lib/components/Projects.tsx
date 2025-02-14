@@ -60,7 +60,9 @@ export const Projects: React.FC<{
             maxHeight: "60vh",
           }}
         >
-          <h1 className="text-2xl font-bold mb-4">{selectedProject}</h1>
+          <h1 className="text-xl sm:text-2xl font-bold mb-4">
+            {selectedProject}
+          </h1>
           {/* @ts-expect-error ProjectDescription is a React.FC or React.ReactElement but TS doesn't care and doesn't want to render it */}
           <ProjectDescription />
         </motion.div>
