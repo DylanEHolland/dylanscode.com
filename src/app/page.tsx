@@ -35,19 +35,17 @@ const Home: NextPage = () => {
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-        <motion.div style={{ width: "100vw", height: "100vh" }}>
+        <motion.div className="w-screen h-screen flex items-start">
           <motion.div
             key={`${screen}-container`}
-            className={`w-full max-w-${
-              screen === "projects" ? "4xl" : "3xl"
-            } ml-auto mr-auto pt-48`}
+            className={`w-full ${
+              screen === "projects" ? "max-w-4xl" : "max-w-3xl"
+            } mx-auto pt-24 sm:pt-48 px-4`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            style={{
-              zIndex: 100,
-            }}
+            style={{ zIndex: 100 }}
           >
             {screen === "landing" && <Landing setScreen={setScreen} />}
             {screen === "projects" && <Projects setScreen={setScreen} />}
