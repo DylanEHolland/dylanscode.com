@@ -36,7 +36,7 @@ export const Projects: React.FC<{
         key="projects-internal-container"
         className="flex flex-col sm:flex-row w-full sm:w-3/4 mx-auto px-4"
       >
-        <motion.div className="w-1/3 mr-4 mt-2">
+        <motion.div className="w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0">
           {Object.keys(projects)
             .reverse()
             .map((project, idx) => (
