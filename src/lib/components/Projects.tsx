@@ -24,7 +24,7 @@ export const Projects: React.FC<{
   const ProjectDescription = projects[selectedProject];
   return (
     <>
-      <motion.div className="flex mt-4 w-3/4 justify-end ml-auto mr-auto mb-4">
+      <motion.div className="flex mt-4 w-full sm:w-3/4 mx-auto mb-4 justify-end px-4">
         <button
           className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md"
           onClick={() => setScreen("landing")}
@@ -34,7 +34,7 @@ export const Projects: React.FC<{
       </motion.div>
       <motion.div
         key="projects-internal-container"
-        className="flex w-3/4 ml-auto mr-auto"
+        className="flex flex-col sm:flex-row w-full sm:w-3/4 mx-auto px-4"
       >
         <motion.div className="w-1/3 mr-4 mt-2">
           {Object.keys(projects)
