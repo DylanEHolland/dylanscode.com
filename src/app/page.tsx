@@ -26,15 +26,9 @@ const Home: NextPage = () => {
           animate={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{ duration: 0.5 }}
+          className="absolute top-0 left-0 w-screen h-screen bg-cover bg-no-repeat"
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
             backgroundImage: `url("${backgroundImages[screen]}")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            width: "100vw",
-            height: "100vh",
             zIndex: -1,
           }}
         ></motion.div>
