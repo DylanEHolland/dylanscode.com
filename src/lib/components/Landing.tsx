@@ -7,7 +7,7 @@ export const Landing: React.FC<{
   setScreen: (screen: "landing" | "projects") => void;
 }> = ({ setScreen }) => {
   return (
-    <motion.div className="w-full">
+    <motion.div className="lg:w-full sm:w-2/3 mx-auto px-4">
       <motion.div className="relative p-4 sm:p-8 pb-2 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-hidden rounded-xl shadow-md">
         <span className="text-xl sm:text-2xl font-semibold text-white mb-4">
           Hi, I{"'"}m Dylan
