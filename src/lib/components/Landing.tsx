@@ -39,7 +39,7 @@ export const Landing: React.FC<{
           <SocialLinks />
         </motion.div>
       </motion.div>
-      <motion.div className="flex flex-col sm:flex-row items-center justify-center mt-4 z-10 gap-4">
+      <motion.div className="flex flex-row items-center justify-center mt-4 z-10 gap-4">
         <button
           className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md"
           onClick={() => {
