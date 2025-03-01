@@ -36,6 +36,7 @@ export const Projects: React.FC<{
 }> = ({ setScreen }) => {
   const [selectedProject, setSelectedProject] = useState<string>("Politech.ai");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const ProjectDescription = projects[selectedProject];
 
   return (
