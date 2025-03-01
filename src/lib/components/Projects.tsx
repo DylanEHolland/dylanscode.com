@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ATVsNetWeb,
   DigiBuild,
@@ -38,6 +38,8 @@ export const Projects: React.FC<{
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const ProjectDescription = projects[selectedProject];
+
+  useEffect(() => {}, []);
 
   return (
     <>
