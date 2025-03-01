@@ -53,7 +53,7 @@ export const Projects: React.FC<{
       >
         <div className="sm:hidden mb-4">
           <button
-            className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md w-full flex items-center justify-center"
+            className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md flex items-center justify-center"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? (
