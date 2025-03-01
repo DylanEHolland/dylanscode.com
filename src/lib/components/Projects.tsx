@@ -21,6 +21,7 @@ export const Projects: React.FC<{
   setScreen: (screen: "landing" | "projects") => void;
 }> = ({ setScreen }) => {
   const [selectedProject, setSelectedProject] = useState<string>("Politech.ai");
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const ProjectDescription = projects[selectedProject];
   return (
     <>
