@@ -37,7 +37,14 @@ export const Projects: React.FC<{
         key="projects-internal-container"
         className="flex flex-col sm:flex-row w-full sm:w-3/4 mx-auto px-4"
       >
-        <div className="sm:hidden mb-4"></div>
+        <div className="sm:hidden mb-4">
+          <button
+            className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md w-full"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? "Close Menu" : "Open Menu"}
+          </button>
+        </div>
         <motion.div className="w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0">
           {Object.keys(projects)
             .reverse()
