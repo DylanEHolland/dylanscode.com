@@ -56,6 +56,10 @@ export const Projects: React.FC<{
               <button
                 key={`project-${idx}`}
                 className="opacity-90 border-2 bg-[#1e1e1e] border-[#323232] w-full mb-2 hover:opacity-100 transition-opacity duration-300 rounded-md p-2"
+                onClick={() => {
+                  setSelectedProject(project);
+                  setMenuOpen(false);
+                }}
               >
                 {project}
               </button>
