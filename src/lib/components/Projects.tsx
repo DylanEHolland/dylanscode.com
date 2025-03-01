@@ -18,6 +18,14 @@ const projects: Record<string, React.FC | React.ReactElement> = {
   "Politech.ai": PolitechAI,
 };
 
+const menuVariants = {
+  open: {
+    opacity: 1,
+    height: "auto",
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
+};
+
 export const Projects: React.FC<{
   setScreen: (screen: "landing" | "projects") => void;
 }> = ({ setScreen }) => {
