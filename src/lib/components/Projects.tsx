@@ -64,9 +64,10 @@ export const Projects: React.FC<{
           </button>
         </div>
         <motion.div
-          className={`${
-            menuOpen ? "block" : "hidden"
-          } sm:block w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0`}
+          variants={menuVariants}
+          initial="closed"
+          animate={menuOpen ? "open" : "closed"}
+          className="sm:block overflow-hidden w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0"
         >
           {Object.keys(projects)
             .reverse()
