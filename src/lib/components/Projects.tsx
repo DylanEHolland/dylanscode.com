@@ -39,7 +39,11 @@ export const Projects: React.FC<{
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const ProjectDescription = projects[selectedProject];
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 640);
+    };
+  }, []);
 
   return (
     <>
