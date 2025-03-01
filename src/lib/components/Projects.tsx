@@ -37,21 +37,11 @@ export const Projects: React.FC<{
   const [selectedProject, setSelectedProject] = useState<string>("Politech.ai");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const ProjectDescription = projects[selectedProject];
+
   return (
     <>
-      <motion.div className="flex mt-4 w-full sm:w-3/4 mx-auto mb-4 justify-end px-4">
-        <button
-          className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md"
-          onClick={() => setScreen("landing")}
-        >
-          Go Back
-        </button>
-      </motion.div>
-      <motion.div
-        key="projects-internal-container"
-        className="flex flex-col sm:flex-row w-full sm:w-3/4 mx-auto px-4"
-      >
-        <div className="sm:hidden mb-4">
+      <motion.div className="flex mt-4 w-full sm:w-3/4 mx-auto mb-4 px-4 justify-between items-center">
+        <div className="sm:hidden">
           <button
             className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md flex items-center justify-center"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -63,6 +53,18 @@ export const Projects: React.FC<{
             )}
           </button>
         </div>
+        <button
+          className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md"
+          onClick={() => setScreen("landing")}
+        >
+          Go Back
+        </button>
+      </motion.div>
+
+      <motion.div
+        key="projects-internal-container"
+        className="flex flex-col sm:flex-row w-full sm:w-3/4 mx-auto px-4"
+      >
         <motion.div
           variants={menuVariants}
           initial="closed"
@@ -84,6 +86,7 @@ export const Projects: React.FC<{
               </button>
             ))}
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 0.9, y: 0 }}
@@ -91,9 +94,7 @@ export const Projects: React.FC<{
           transition={{ duration: 0.3 }}
           key={`project-description-${selectedProject}`}
           className="w-full sm:w-2/3 relative p-4 sm:p-8 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-y-scroll overflow-x-hidden rounded-xl shadow-md"
-          style={{
-            maxHeight: "60vh",
-          }}
+          style={{ maxHeight: "60vh" }}
         >
           <h1 className="text-xl sm:text-2xl font-bold mb-4">
             {selectedProject}
