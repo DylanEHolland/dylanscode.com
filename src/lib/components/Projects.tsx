@@ -7,6 +7,7 @@ import {
   SouffleClub,
   TrustedFor,
 } from "./ProjectDescriptions";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 // import Image from "next/image";
 
 const projects: Record<string, React.FC | React.ReactElement> = {
@@ -42,7 +43,11 @@ export const Projects: React.FC<{
             className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md w-full"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            {menuOpen ? "Close Menu" : "Open Menu"}
+            {menuOpen ? (
+              <AiOutlineClose size={24} />
+            ) : (
+              <AiOutlineMenu size={24} />
+            )}
           </button>
         </div>
         <motion.div
