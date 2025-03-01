@@ -24,6 +24,11 @@ const menuVariants = {
     height: "auto",
     transition: { duration: 0.3, ease: "easeInOut" },
   },
+  closed: {
+    opacity: 0,
+    height: 0,
+    transition: { duration: 0.3, ease: "easeInOut" },
+  },
 };
 
 export const Projects: React.FC<{
