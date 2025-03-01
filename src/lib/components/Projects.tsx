@@ -45,14 +45,17 @@ export const Projects: React.FC<{
             {menuOpen ? "Close Menu" : "Open Menu"}
           </button>
         </div>
-        <motion.div className="w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0">
+        <motion.div
+          className={`${
+            menuOpen ? "block" : "hidden"
+          } sm:block w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0`}
+        >
           {Object.keys(projects)
             .reverse()
             .map((project, idx) => (
               <button
                 key={`project-${idx}`}
                 className="opacity-90 border-2 bg-[#1e1e1e] border-[#323232] w-full mb-2 hover:opacity-100 transition-opacity duration-300 rounded-md p-2"
-                onClick={() => setSelectedProject(project)}
               >
                 {project}
               </button>
