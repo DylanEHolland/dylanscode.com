@@ -79,8 +79,8 @@ export const Projects: React.FC<{
         <motion.div
           variants={menuVariants}
           initial="closed"
-          animate={menuOpen ? "open" : "closed"}
-          className="sm:block overflow-hidden w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0"
+          animate={isDesktop ? "open" : menuOpen ? "open" : "closed"}
+          className="overflow-hidden w-full sm:w-1/3 mr-0 sm:mr-4 mt-2 mb-4 sm:mb-0"
         >
           {Object.keys(projects)
             .reverse()
