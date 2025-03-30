@@ -7,12 +7,12 @@ export const Landing: React.FC<{
   setScreen: (screen: "landing" | "projects") => void;
 }> = ({ setScreen }) => {
   return (
-    <motion.div className="w-2/3 ml-auto mr-auto">
-      <motion.div className="relative p-8 pb-2 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-hidden rounded-xl shadow-md">
-        <span className="text-2xl font-semibold text-white mb-4">
+    <motion.div className="lg:w-full sm:w-2/3 mx-auto px-4">
+      <motion.div className="relative p-4 sm:p-8 pb-2 opacity-90 border-2 bg-[#1e1e1e] border-[#323232] flex flex-col items-start justify-start overflow-hidden rounded-xl shadow-md">
+        <span className="text-xl sm:text-2xl font-semibold text-white mb-4">
           Hi, I{"'"}m Dylan
         </span>
-        <motion.div>
+        <motion.div className="text-sm sm:text-base">
           I’m a software engineer with hands-on experience building digital
           products since I was a teenager. My early work led me to tech roles at
           an e-commerce company that later sold and then into a YC-backed
@@ -27,27 +27,28 @@ export const Landing: React.FC<{
           allowing teams to focus on delivering real value efficiently and adapt
           to evolving challenges.
         </motion.div>
-        {/* <Image
+        {/* Uncomment and adjust if needed:
+        <Image
           src="/me-irl.png"
           alt="me-irl"
           width={200}
           height={200}
-          className="rounded-full mr-auto ml-auto"
+          className="rounded-full mx-auto"
         /> */}
-        <motion.div className="flex items-center gap-4 ml-auto mr-0 mt-8">
+        <motion.div className="flex items-center gap-4 mt-8 self-end">
           <SocialLinks />
         </motion.div>
       </motion.div>
-      <motion.div className="flex items-center justify-center mt-4 z-100">
+      <motion.div className="flex flex-row items-center justify-center mt-4 z-10 gap-4">
         <button
-          className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md mr-4"
+          className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md"
           onClick={() => {
             setScreen("projects");
           }}
         >
           Resume
         </button>
-        <a href={CALENDLY_LINK} target="_blank">
+        <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
           <button className="bg-black/60 border-2 border-black/10 text-white p-2 rounded-md">
             Book a call
           </button>
